@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserCheck, ShieldCheck, HelpCircle, Layers, Sparkles } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
 
 interface HeaderProps {
   currentTab: string;
@@ -26,21 +26,8 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-xs">
       {/* Top Utility Bar */}
       <div className="border-b border-gray-100 text-xs text-gray-500 bg-gray-50/80">
-        <div className="max-w-6xl mx-auto px-4 py-1.5 flex justify-between items-center">
+        <div className="max-w-6xl mx-auto px-4 py-1.5 flex justify-end items-center">
           <div className="flex items-center gap-3">
-            <span className="font-semibold text-gray-600">ONESNC 스마트 직무교육</span>
-            <span className="text-gray-300">|</span>
-            <span className="text-blue-600 font-medium hidden sm:inline">2024 최신 실무 밀착형 IT & 법률 과정</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <button
-              onClick={openAdminModal}
-              className="flex items-center gap-1 text-xs font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded-full hover:bg-indigo-100 transition-colors cursor-pointer"
-            >
-              <Sparkles className="w-3 h-3 text-indigo-600" />
-              <span>관리자 (리드 {leadCount}건)</span>
-            </button>
-            <span className="text-gray-300">|</span>
             <button
               onClick={onToggleLogin}
               className="hover:text-blue-600 font-semibold transition-colors cursor-pointer"
