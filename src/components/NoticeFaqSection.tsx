@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Megaphone, HelpCircle, ChevronDown, ChevronUp, Bell, ArrowRight, X } from 'lucide-react';
+import { Megaphone, HelpCircle, ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 
 interface NoticeItem {
   id: string;
@@ -79,7 +79,6 @@ const FAQS: FaqItem[] = [
 
 export const NoticeFaqSection: React.FC = () => {
   const [openFaqId, setOpenFaqId] = useState<string | null>('faq-1');
-  const [selectedNotice, setSelectedNotice] = useState<NoticeItem | null>(null);
   const [showAllFaqs, setShowAllFaqs] = useState<boolean>(false);
 
   const toggleFaq = (id: string) => {
@@ -105,14 +104,13 @@ export const NoticeFaqSection: React.FC = () => {
             {NOTICES.map((notice) => (
               <div
                 key={notice.id}
-                onClick={() => setSelectedNotice(notice)}
-                className="py-3.5 first:pt-0 last:pb-0 flex items-center justify-between gap-3 group cursor-pointer hover:bg-slate-50/80 -mx-2 px-2 rounded-lg transition-colors"
+                className="py-3.5 first:pt-0 last:pb-0 flex items-center justify-between gap-3 -mx-2 px-2 rounded-lg"
               >
                 <div className="flex items-center gap-2.5 min-w-0">
                   <span className="shrink-0 text-[11px] font-extrabold px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-100">
                     {notice.category}
                   </span>
-                  <span className="text-xs md:text-sm font-semibold text-gray-800 group-hover:text-blue-600 truncate transition-colors">
+                  <span className="text-xs md:text-sm font-semibold text-gray-800 truncate">
                     {notice.title}
                   </span>
                   {notice.isNew && (
@@ -130,13 +128,9 @@ export const NoticeFaqSection: React.FC = () => {
         </div>
 
         <div className="pt-4 mt-4 border-t border-gray-100 flex justify-end">
-          <button
-            onClick={() => setSelectedNotice(NOTICES[0])}
-            className="text-xs text-gray-500 hover:text-blue-600 font-bold flex items-center gap-1 transition-colors cursor-pointer"
-          >
-            <span>공지사항 전체보기</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          <div className="text-xs text-gray-400 font-medium flex items-center gap-1">
+            <span>공지사항 목록</span>
+          </div>
         </div>
       </section>
 
@@ -200,43 +194,6 @@ export const NoticeFaqSection: React.FC = () => {
           </button>
         </div>
       </section>
-
-      {/* Notice Detail Modal */}
-      {selectedNotice && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative animate-in fade-in zoom-in duration-200">
-            <button
-              onClick={() => setSelectedNotice(null)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="space-y-1">
-              <span className="inline-block bg-blue-100 text-blue-700 text-xs font-extrabold px-2.5 py-0.5 rounded">
-                [{selectedNotice.category}] 공지사항
-              </span>
-              <h3 className="text-lg font-bold text-gray-900 leading-snug pt-1">
-                {selectedNotice.title}
-              </h3>
-              <p className="text-xs text-gray-400 font-mono">작성일: {selectedNotice.date}</p>
-            </div>
-
-            <div className="p-4 bg-gray-50 rounded-xl border border-gray-200 text-xs sm:text-sm text-gray-700 leading-relaxed font-normal">
-              {selectedNotice.content}
-            </div>
-
-            <div className="pt-2 flex justify-end">
-              <button
-                onClick={() => setSelectedNotice(null)}
-                className="bg-gray-900 hover:bg-black text-white font-bold text-xs px-5 py-2.5 rounded-lg transition-colors cursor-pointer"
-              >
-                확인
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

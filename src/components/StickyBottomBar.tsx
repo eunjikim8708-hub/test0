@@ -67,16 +67,6 @@ export const StickyBottomBar: React.FC<StickyBottomBarProps> = ({
 
         {/* Right Side Buttons */}
         <div className="flex items-center gap-3 w-full md:w-auto justify-end">
-          {/* Recommendation Hover Tooltip */}
-          <div className="relative group hidden sm:block">
-            <button className="px-4 py-2.5 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 text-xs md:text-sm transition-colors">
-              💡 추천
-            </button>
-            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-52 bg-gray-900 text-white text-xs p-2.5 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 text-center leading-tight">
-              이 과정과 함께 '{course.recommendedWith || '파이썬 입문'}'을(를) 많이 수강합니다.
-            </div>
-          </div>
-
           {/* 1:1 Consultation Request Button */}
           <button
             onClick={onOpenConsultation}
