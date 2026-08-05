@@ -1,0 +1,272 @@
+import { Course } from '../types';
+
+export const INITIAL_COURSES: Course[] = [
+  {
+    id: 'course-1',
+    title: '성과 중심 모던 리더십 마스터 클래스',
+    subTitle: '[변화와 성과를 주도하는 리더]',
+    category: 'leadership',
+    categoryLabel: '리더십 교육',
+    badgeTag: '# 리더십 교육',
+    thumbnailGradient: 'from-blue-600 via-indigo-700 to-purple-800',
+    instructor: '김에이아이 | 리더십 전문가',
+    price: 210000,
+    originalPrice: 300000,
+    discountRate: 30,
+    studentsCount: 1,
+    heartCount: 2,
+    reviewsCount: 2,
+    rating: 5.0,
+    durationHours: 4,
+    chaptersCount: 5,
+    validDays: 60,
+    completionRate: '진도 100% 이상 수료',
+    description: '변화하는 비즈니스 환경에서 팀의 몰입과 성과를 이끌어내는 현대적 리더십 가이드. 온라인/오프라인 통합 수강 신청 및 실무 샘플 적용 과정입니다.',
+    tags: ['# 리더십 교육', '# 성과관리', '# 조직문화', '# 코칭'],
+    recommendedWith: '파이썬 데이터 분석 및 업무 자동화',
+    curriculum: [
+      { no: 1, title: '모던 리더십의 기초와 역할 변화', duration: '45분' },
+      { no: 2, title: '팀원 동기부여와 성과를 부르는 피드백 기술', duration: '50분' },
+      { no: 3, title: '원격 & 하이브리드 팀 커뮤니케이션 전략', duration: '40분' },
+      { no: 4, title: '갈등 관리와 건설적 문제 해결 가이드', duration: '50분' },
+      { no: 5, title: '목표 설정(OKR)과 지속 가능한 팀 리더십', duration: '55분' }
+    ],
+    reviews: [
+      { id: 'r1', userName: '김*현 (팀장)', rating: 5, date: '2024.06.12', comment: '신임 팀장으로서 실제 조직 관리에 즉시 적용할 수 있는 유익한 강좌였습니다.' },
+      { id: 'r2', userName: '이*우 (이사)', rating: 5, date: '2024.06.18', comment: '피드백 기법과 OKR 연계 부분이 매우 정교하게 구성되어 있습니다.' }
+    ]
+  },
+  {
+    id: 'course-2',
+    title: '10배 빠른 성과를 만드는 AI 마케팅 실무 마스터',
+    subTitle: '[마케터의 칼퇴 필수 가이드]',
+    category: 'ai',
+    categoryLabel: 'AI / IT 교육',
+    badgeTag: '# AI 마케팅 교육',
+    thumbnailGradient: 'from-cyan-600 via-blue-700 to-indigo-900',
+    instructor: '이마케팅 | AI 콘텐츠 전략가',
+    price: 245000,
+    originalPrice: 350000,
+    discountRate: 30,
+    studentsCount: 980,
+    heartCount: 42,
+    reviewsCount: 385,
+    rating: 5.0,
+    durationHours: 6,
+    chaptersCount: 6,
+    validDays: 60,
+    completionRate: '수료율 97.5%',
+    description: '생성형 AI(Gemini, ChatGPT, Midjourney)를 활용해 카피라이팅, SNS 콘텐츠, 광고 이미지, 데이터 분석을 초고속으로 수행하는 가이드.',
+    tags: ['# AI 마케팅 교육', '# 프롬프트', '# 생성형AI', '# 업무자동화'],
+    recommendedWith: '피그마 UI/UX 실전 프로토타이핑',
+    curriculum: [
+      { no: 1, title: 'AI 마케팅 생태계와 2024 트렌드 분석', duration: '50분' },
+      { no: 2, title: '구매 전환을 일으키는 프롬프트 엔지니어링', duration: '60분' },
+      { no: 3, title: 'AI 비주얼 생성: 카드뉴스 & 광고 소재 제작', duration: '65분' },
+      { no: 4, title: 'SEO 맞춤형 블로그 및 검색 광고 문구 자동 생성', duration: '55분' },
+      { no: 5, title: '고객 데이터 분석과 마케팅 자동화 툴 연동', duration: '60분' },
+      { no: 6, title: 'AI 기반 마케팅 캠페인 종합 프로젝트', duration: '70분' }
+    ],
+    reviews: [
+      { id: 'r3', userName: '박*서 (마케터)', rating: 5, date: '2024.06.20', comment: '카피라이팅 작성 시간이 1/10로 줄었습니다. 완전 강추합니다!' }
+    ]
+  },
+  {
+    id: 'course-3',
+    title: '[AI 실무] 프롬프트 엔지니어링 비즈니스 활용',
+    subTitle: '[실무자 전용 LLM 프롬프팅]',
+    category: 'ai',
+    categoryLabel: 'AI / IT 교육',
+    badgeTag: '# AI 마케팅 교육',
+    thumbnailGradient: 'from-slate-700 via-slate-800 to-slate-900',
+    instructor: '박프롬프트 | LLM 시스템 건축가',
+    price: 210000,
+    originalPrice: 300000,
+    discountRate: 30,
+    studentsCount: 860,
+    heartCount: 38,
+    reviewsCount: 210,
+    rating: 4.9,
+    durationHours: 5,
+    chaptersCount: 5,
+    validDays: 60,
+    completionRate: '수료율 99.4%',
+    description: '업무 보고서, 이메일, 문서 요약, 아이디어 도출에 LLM 프롬프트를 체계적으로 활용하여 실무 생산성을 극대화하는 교육과정.',
+    tags: ['# AI 마케팅 교육', '# 프롬프트', '# 업무효율', '# IT실무'],
+    recommendedWith: '파이썬 데이터 분석 & 자동화',
+    curriculum: [
+      { no: 1, title: '프롬프트 프레임워크 이해 (Few-shot, Chain-of-Thought)', duration: '50분' },
+      { no: 2, title: '보고서 및 기획서 자동 초안 생성 템플릿', duration: '55분' },
+      { no: 3, title: '엑셀 & Google Sheets AI 연동 가이드', duration: '60분' },
+      { no: 4, title: '기업 내부 지식 챗봇 및 RAG 입문', duration: '65분' },
+      { no: 5, title: '비즈니스 실전 프로젝트 및 보안 주의사항', duration: '50분' }
+    ],
+    reviews: [
+      { id: 'r4', userName: '최*민 (기획자)', rating: 5, date: '2024.07.01', comment: '회사 문서 작업할 때 템플릿 프롬프트 적용하니 업무 처리 속도가 대폭 향상되었습니다.' }
+    ]
+  },
+  {
+    id: 'course-4',
+    title: '[개발] 파이썬 데이터 분석 & 자동화 마스터',
+    subTitle: '[비전공자도 가능한 업무 자동화]',
+    category: 'dev',
+    categoryLabel: '개발 / 데이터',
+    badgeTag: '# IT실무',
+    thumbnailGradient: 'from-emerald-700 via-teal-800 to-cyan-900',
+    instructor: '정코드 | 파이썬 데이터 분석가',
+    price: 180000,
+    originalPrice: 250000,
+    discountRate: 28,
+    studentsCount: 1420,
+    heartCount: 65,
+    reviewsCount: 180,
+    rating: 4.9,
+    durationHours: 8,
+    chaptersCount: 8,
+    validDays: 90,
+    completionRate: '수료율 98.8%',
+    description: '반복적인 엑셀 작업, 크롤링, 데이터 시각화를 파이썬 코딩 몇 줄로 해결하는 비전공자 맞춤 데이터 분석 자동화 클래스.',
+    tags: ['# IT실무', '# 파이썬', '# 데이터분석', '# 자동화'],
+    recommendedWith: '프롬프트 엔지니어링 비즈니스 활용',
+    curriculum: [
+      { no: 1, title: '파이썬 기초 문법과 개발 환경 세팅', duration: '60분' },
+      { no: 2, title: 'Pandas를 활용한 엑셀 데이터 정제', duration: '75분' },
+      { no: 3, title: '웹 데이터 크롤링 및 실시간 수집', duration: '80분' },
+      { no: 4, title: 'Matplotlib & Seaborn 데이터 시각화', duration: '60분' },
+      { no: 5, title: '이메일 / 첨부파일 자동 발송 업무 구축', duration: '50분' }
+    ],
+    reviews: [
+      { id: 'r5', userName: '정*훈 (영업관리)', rating: 5, date: '2024.06.28', comment: '매일 2시간 걸리던 엑셀 정산 작업이 버튼 하나로 끝납니다.' }
+    ]
+  },
+  {
+    id: 'course-5',
+    title: '[기획] 피그마 UI/UX 실전 프로토타이핑',
+    subTitle: '[디자이너와 개발자가 함께 듣는 실무]',
+    category: 'pm',
+    categoryLabel: '기획 / 마케팅',
+    badgeTag: '# 인사',
+    thumbnailGradient: 'from-purple-600 via-pink-700 to-rose-800',
+    instructor: '한디자인 | UX 리드',
+    price: 195000,
+    originalPrice: 260000,
+    discountRate: 25,
+    studentsCount: 35,
+    heartCount: 18,
+    reviewsCount: 6,
+    rating: 4.9,
+    durationHours: 6,
+    chaptersCount: 6,
+    validDays: 60,
+    completionRate: '진도 100% 이상 수료',
+    description: '피그마(Figma)의 오토레이아웃, 디자인 시스템, 컴포넌트 변주, 반응형 프로토타입까지 한 번에 끝내는 실전 모듈.',
+    tags: ['# UIUX', '# 피그마', '# 서비스기획', '# 기획실무'],
+    recommendedWith: '10배 빠른 성과를 만드는 AI 마케팅',
+    curriculum: [
+      { no: 1, title: '피그마 인터페이스 & 인터랙션 이해', duration: '45분' },
+      { no: 2, title: '오토레이아웃과 디자인 시스템 구축', duration: '70분' },
+      { no: 3, title: '모바일 및 웹 반응형 레이아웃 설계', duration: '60분' },
+      { no: 4, title: '고급 인터랙티브 프로토타이핑', duration: '65분' },
+      { no: 5, title: '개발자 핸드오프 및 협업 팁', duration: '50분' }
+    ],
+    reviews: [
+      { id: 'r6', userName: '송*아 (PM)', rating: 5, date: '2024.07.05', comment: '개발팀과의 소통이 훨씬 쉬워졌어요. 실무 꿀팁 가득합니다!' }
+    ]
+  },
+  {
+    id: 'course-6',
+    title: '필수 법률기초 및 기업 거래 계약 실무',
+    subTitle: '[법알못 직장인을 위한 계약 가이드]',
+    category: 'legal',
+    categoryLabel: '법률기초 교육',
+    badgeTag: '# 법률기초 교육',
+    thumbnailGradient: 'from-blue-700 via-sky-800 to-slate-900',
+    instructor: '장변호사 | 기업법무 자문위원',
+    price: 160000,
+    originalPrice: 200000,
+    discountRate: 20,
+    studentsCount: 62,
+    heartCount: 9,
+    reviewsCount: 4,
+    rating: 4.7,
+    durationHours: 4,
+    chaptersCount: 4,
+    validDays: 60,
+    completionRate: '진도 100% 이상 수료',
+    description: '계약서 독소조항 검토, 비밀유지협약(NDA), 손해배상 조항 등 실무자가 반드시 알아야 할 법률 기초 검토 능력 향상 과정.',
+    tags: ['# 법률기초 교육', '# 계약서검토', '# 기업법무', '# 실무법률'],
+    curriculum: [
+      { no: 1, title: '기업 계약의 기본 구조 및 효력 발생 조건', duration: '50분' },
+      { no: 2, title: '계약서 주요 독소조항 유형 및 위험 관리', duration: '60분' },
+      { no: 3, title: '비밀유지협약(NDA) 및 용역 계약서 검토 실습', duration: '55분' },
+      { no: 4, title: '분쟁 발생 시 채권 회수 및 내용증명 작성 법', duration: '50분' }
+    ],
+    reviews: [
+      { id: 'r7', userName: '강*성 (경영지원)', rating: 5, date: '2024.05.30', comment: '외주 계약서 검토할 때 정말 큰 도움이 되고 있습니다.' }
+    ]
+  },
+  {
+    id: 'course-7',
+    title: '직무별 필수 법률 & 최신 근로기준법',
+    subTitle: '[인사/노무 담당자 핵심 가이드]',
+    category: 'job_legal',
+    categoryLabel: '직무별 법 교육',
+    badgeTag: '# 직무별 법 교육',
+    thumbnailGradient: 'from-amber-700 via-orange-800 to-stone-900',
+    instructor: '신노무사 | 노동법 전문',
+    price: 175000,
+    originalPrice: 220000,
+    discountRate: 20,
+    studentsCount: 54,
+    heartCount: 11,
+    reviewsCount: 5,
+    rating: 4.8,
+    durationHours: 5,
+    chaptersCount: 5,
+    validDays: 60,
+    completionRate: '진도 100% 이상 수료',
+    description: '유연근무제, 통상임금, 퇴직금, 연차휴가 개정 근로기준법과 직무별 준수 법률 사안을 실제 대법원 판례 중심으로 학습.',
+    tags: ['# 직무별 법 교육', '# 근로기준법', '# 인사노무', '# 법률이해'],
+    curriculum: [
+      { no: 1, title: '2024 개정 근로기준법 주요 개정 포인트', duration: '50분' },
+      { no: 2, title: '근로계약서 작성 및 임금 설정 실무', duration: '55분' },
+      { no: 3, title: '유연근무제 운영 및 연차유급휴가 정산', duration: '60분' },
+      { no: 4, title: '직장 내 괴롭힘 예방 및 처리 절차', duration: '50분' },
+      { no: 5, title: '최신 노동 판례 심층 분석', duration: '55분' }
+    ],
+    reviews: [
+      { id: 'r8', userName: '윤*진 (HRD)', rating: 5, date: '2024.06.10', comment: '최신 개정 사항 반영이 아주 빠르고 예시가 실무와 밀접합니다.' }
+    ]
+  },
+  {
+    id: 'course-8',
+    title: '기업 준법/윤리 경영 실무 실천 과정',
+    subTitle: '[컴플라이언스 리스크 예방]',
+    category: 'ethics',
+    categoryLabel: '준법/윤리 교육',
+    badgeTag: '# 준법/윤리 교육',
+    thumbnailGradient: 'from-teal-700 via-emerald-800 to-slate-900',
+    instructor: '윤컴플라이언스 | ESG 전문 컨설턴트',
+    price: 150000,
+    originalPrice: 190000,
+    discountRate: 21,
+    studentsCount: 38,
+    heartCount: 7,
+    reviewsCount: 3,
+    rating: 4.9,
+    durationHours: 3,
+    chaptersCount: 3,
+    validDays: 60,
+    completionRate: '진도 100% 이상 수료',
+    description: '개인정보보호법, 공정거래, 내부고발자 보호 및 기업 지속 가능성을 높이는 윤리 경영 규정 준수 가이드.',
+    tags: ['# 준법/윤리 교육', '# ESG', '# 개인정보보호', '# 공정거래'],
+    curriculum: [
+      { no: 1, title: '기업 컴플라이언스의 개요와 최신 법적 제재사례', duration: '45분' },
+      { no: 2, title: '개인정보보호법 준수 실무 가이드라인', duration: '55분' },
+      { no: 3, title: '내부 자율준수 프로그램 구축 전략', duration: '50분' }
+    ],
+    reviews: [
+      { id: 'r9', userName: '임*우 (감사팀)', rating: 5, date: '2024.05.15', comment: '임직원 필수 수강 교육으로 손색이 없습니다.' }
+    ]
+  }
+];

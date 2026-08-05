@@ -1,0 +1,8 @@
+{
+  "name": "Remix 사용자 메인 개편",
+  "description": "(주)원앤스엔씨 직무 및 IT 교육 리드 제너레이션 통합 스마트 교육 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
